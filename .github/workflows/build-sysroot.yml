@@ -1,3 +1,4 @@
+# .github/workflows/build-sysroot.yml
 name: Build FreeBSD Sysroot
 
 on:
@@ -18,15 +19,105 @@ jobs:
         run: |
           curl -L -o base.txz \
             "https://download.freebsd.org/releases/amd64/${{ matrix.version }}-RELEASE/base.txz"
+          ls -lh base.txz
 
       - name: Extract sysroot
         run: |
           mkdir -p sysroot/x86_64-pc-freebsd${{ matrix.version }}
           tar -C sysroot/x86_64-pc-freebsd${{ matrix.version }} -xf base.txz \
-            ./usr/include ./usr/lib ./usr/libdata ./lib ./libexec
+            ./usr/include \
+            ./usr/lib \
+            ./usr/libdata \
+            ./lib \
+            ./libexec
 
-      - name: Upload artifact
+      - name: Upload raw sysroot artifact
         uses: actions/upload-artifact@v4
         with:
-          name: sysroot-freebsd-${{ matrix.version }}
+          name: sysroot-raw-${{ matrix.version }}
           path: sysroot/
+
+      - name: Setup conda-build
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+      - shell: bash -el {0}
+        run: conda install -y conda-build conda-verify
+
+      - name: Build conda package
+        shell: bash -el {0}
+        run: |
+          VERSION=${{ matrix.version }}
+          mkdir -p recipe
+          cat > recipe/meta.yaml << EOF
+          package:
+            name: sysroot_freebsd-64
+            version: "${VERSION}"
+          build:
+            noarch: generic
+            number: 0
+          requirements:
+            build: []
+            host: []
+            run: []
+          test:
+            commands:
+              - test -d \$PREFIX/x86_64-pc-freebsd${VERSION}/usr/include
+              - test -f \$PREFIX/x86_64-pc-freebsd${VERSION}/usr/include/stdio.h
+          about:
+            home: https://www.freebsd.org
+            license: BSD-2-Clause
+            summary: "FreeBSD ${VERSION} sysroot for cross-compilation"
+          EOF
+          
+          cat > recipe/build.sh << EOF
+          #!/bin/bash
+          VERSION=${VERSION}
+          mkdir -p \$PREFIX/x86_64-pc-freebsd\${VERSION}
+          cp -R sysroot/x86_64-pc-freebsd\${VERSION}/* \$PREFIX/
+          EOF
+          chmod +x recipe/build.sh
+          
+          conda build recipe/ --output-folder conda-bld
+
+      - name: Upload conda package
+        uses: actions/upload-artifact@v4
+        with:
+          name: sysroot-conda-${{ matrix.version }}
+          path: conda-bld/noarch/sysroot_freebsd-64-*.tar.bz2
+
+  test-cross-compile:
+    needs: build-sysroot
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: ['14.4']
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: sysroot-conda-14.4
+          path: sysroot-pkg/
+
+      - name: Install cross toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang lld llvm file
+
+      - name: Extract sysroot
+        run: |
+          mkdir -p /opt/freebsd-sysroot
+          tar -C /opt/freebsd-sysroot -xjf sysroot-pkg/*.tar.bz2
+
+      - name: Test compile
+        run: |
+          cat > hello.c << 'EOF'
+          #include <stdio.h>
+          int main() { printf("Hello FreeBSD\n"); return 0; }
+          EOF
+          
+          clang -target x86_64-pc-freebsd14.0 \
+            --sysroot=/opt/freebsd-sysroot/x86_64-pc-freebsd14.0 \
+            -fuse-ld=lld \
+            hello.c -o hello-freebsd
+          
+          file hello-freebsd
