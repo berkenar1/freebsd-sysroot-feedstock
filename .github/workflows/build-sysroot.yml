@@ -195,23 +195,20 @@ jobs:
       - name: Install rattler-build
         run: |
           curl -fsSL \
-            https://github.com/prefix-dev/rattler-build/releases/latest/download/rattler-build-x86_64-unknown-linux-musl.tar.gz \
-            | tar -xz -C /usr/local/bin
+            https://github.com/prefix-dev/rattler-build/releases/download/v0.64.1/rattler-build-x86_64-unknown-linux-musl \
+            -o /usr/local/bin/rattler-build
+          chmod +x /usr/local/bin/rattler-build
           rattler-build --version
 
       - name: Prepare recipe and source
         run: |
           V="${{ matrix.version }}"
-          mkdir -p recipe
-
-          # Extract the tarball so build script can access it
-          mkdir -p sysroot_src
+          mkdir -p recipe sysroot_src
           tar -C sysroot_src -xjf sysroot_freebsd-64-${V}.tar.bz2
 
           cat > recipe/recipe.yaml << EOF
           context:
             version: "${V}"
-            target_triple: "x86_64-pc-freebsd${V}"
 
           package:
             name: sysroot_freebsd-64
