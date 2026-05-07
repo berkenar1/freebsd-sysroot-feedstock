@@ -179,3 +179,69 @@ jobs:
           file hello-freebsd-cpp | grep -qi "freebsd" \
             || (echo "ERROR: C++ binary not a FreeBSD ELF" && exit 1)
           echo "C++ cross-compilation: PASSED"
+
+  conda-package:
+    needs: test-cross-compile
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: ['14.4', '15.0']
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: sysroot-${{ matrix.version }}
+          path: ./
+
+      - name: Install rattler-build
+        run: |
+          curl -fsSL \
+            https://github.com/prefix-dev/rattler-build/releases/latest/download/rattler-build-x86_64-unknown-linux-musl.tar.gz \
+            | tar -xz -C /usr/local/bin
+          rattler-build --version
+
+      - name: Prepare recipe and source
+        run: |
+          V="${{ matrix.version }}"
+          mkdir -p recipe
+
+          # Extract the tarball so build script can access it
+          mkdir -p sysroot_src
+          tar -C sysroot_src -xjf sysroot_freebsd-64-${V}.tar.bz2
+
+          cat > recipe/recipe.yaml << EOF
+          context:
+            version: "${V}"
+            target_triple: "x86_64-pc-freebsd${V}"
+
+          package:
+            name: sysroot_freebsd-64
+            version: "${V}"
+
+          build:
+            number: 0
+            noarch: generic
+            script:
+              - mkdir -p "\$PREFIX/x86_64-pc-freebsd${V}"
+              - cp -R sysroot_src/x86_64-pc-freebsd${V}/. "\$PREFIX/x86_64-pc-freebsd${V}/"
+
+          about:
+            homepage: https://www.freebsd.org
+            license: BSD-2-Clause
+            summary: FreeBSD ${V} sysroot for cross-compilation (x86_64)
+          EOF
+
+      - name: Build conda package
+        run: |
+          rattler-build build \
+            --recipe recipe/recipe.yaml \
+            --output-dir conda-bld
+          echo "Built packages:"
+          find conda-bld -name '*.conda' -o -name '*.tar.bz2' | head -20
+
+      - name: Upload conda package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: conda-pkg-${{ matrix.version }}
+          path: |
+            conda-bld/**/*.conda
+            conda-bld/**/*.tar.bz2
