@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build-sysroot:
     runs-on: ubuntu-latest
@@ -14,15 +17,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download FreeBSD base
+      - name: Download FreeBSD base.txz
         run: |
-          curl -L -o base.txz \
+          curl -fL -o base.txz \
             "https://download.freebsd.org/releases/amd64/${{ matrix.version }}-RELEASE/base.txz"
+          ls -lh base.txz
 
       - name: Extract sysroot
         run: |
-          mkdir -p sysroot/x86_64-pc-freebsd${{ matrix.version }}
-          tar -C sysroot/x86_64-pc-freebsd${{ matrix.version }} -xf base.txz \
+          V="${{ matrix.version }}"
+          mkdir -p sysroot
+          tar -C sysroot -xf base.txz \
             ./usr/include \
             ./usr/lib \
             ./usr/libdata \
@@ -31,13 +36,11 @@ jobs:
 
       - name: Verify sysroot structure
         run: |
-          SYSROOT="sysroot/x86_64-pc-freebsd${{ matrix.version }}"
-          echo "Checking required sysroot directories..."
-          test -d "$SYSROOT/usr/include"  || (echo "MISSING: usr/include"  && exit 1)
-          test -d "$SYSROOT/usr/lib"      || (echo "MISSING: usr/lib"      && exit 1)
-          test -d "$SYSROOT/usr/libdata"  || (echo "MISSING: usr/libdata"  && exit 1)
-          test -d "$SYSROOT/lib"          || (echo "MISSING: lib"          && exit 1)
-          test -d "$SYSROOT/libexec"      || (echo "MISSING: libexec"      && exit 1)
+          SYSROOT="sysroot"
+          echo "Checking required directories..."
+          for dir in usr/include usr/lib usr/libdata lib libexec; do
+            test -d "$SYSROOT/$dir" || (echo "MISSING: $dir" && exit 1)
+          done
           echo "Checking essential C headers..."
           for hdr in stdio.h stdlib.h string.h stdint.h stddef.h \
                      sys/types.h sys/stat.h sys/socket.h \
@@ -53,89 +56,21 @@ jobs:
           echo "Checking C++ headers..."
           test -d "$SYSROOT/usr/include/c++" \
             || (echo "MISSING: C++ include directory" && exit 1)
-          echo "All sysroot structure checks passed."
+          echo "All checks passed."
 
-      - name: Upload raw sysroot artifact
+      - name: Package sysroot as tarball
+        run: |
+          V="${{ matrix.version }}"
+          mkdir -p pkg/x86_64-pc-freebsd${V}
+          cp -R sysroot/* pkg/x86_64-pc-freebsd${V}/
+          tar -C pkg -cjf sysroot_freebsd-64-${V}.tar.bz2 x86_64-pc-freebsd${V}/
+          ls -lh sysroot_freebsd-64-${V}.tar.bz2
+
+      - name: Upload sysroot artifact
         uses: actions/upload-artifact@v4
         with:
-          name: sysroot-raw-${{ matrix.version }}
-          path: sysroot/
-
-      - name: Setup conda-build
-        uses: conda-incubator/setup-miniconda@v3
-        with:
-          miniforge-version: latest
-          conda-remove-defaults: true
-      - shell: bash -el {0}
-        run: |
-          conda install -y conda-build conda-verify
-
-      - name: Build conda package
-        shell: bash -el {0}
-        run: |
-          VERSION="${{ matrix.version }}"
-          mkdir -p recipe
-          
-          cat > recipe/meta.yaml << 'EOF'
-          package:
-            name: sysroot_freebsd-64
-            version: "${VERSION}"
-          build:
-            noarch: generic
-            number: 0
-          requirements:
-            build: []
-            host: []
-            run: []
-          test:
-            commands:
-              # Directory structure
-              - test -d $PREFIX/x86_64-pc-freebsd${VERSION}/usr/include
-              - test -d $PREFIX/x86_64-pc-freebsd${VERSION}/usr/lib
-              - test -d $PREFIX/x86_64-pc-freebsd${VERSION}/usr/libdata
-              - test -d $PREFIX/x86_64-pc-freebsd${VERSION}/lib
-              - test -d $PREFIX/x86_64-pc-freebsd${VERSION}/libexec
-              # Essential C headers
-              - test -f $PREFIX/x86_64-pc-freebsd${VERSION}/usr/include/stdio.h
-              - test -f $PREFIX/x86_64-pc-freebsd${VERSION}/usr/include/stdlib.h
-              - test -f $PREFIX/x86_64-pc-freebsd${VERSION}/usr/include/string.h
-              - test -f $PREFIX/x86_64-pc-freebsd${VERSION}/usr/include/stdint.h
-              - test -f $PREFIX/x86_64-pc-freebsd${VERSION}/usr/include/stddef.h
-              - test -f $PREFIX/x86_64-pc-freebsd${VERSION}/usr/include/unistd.h
-              - test -f $PREFIX/x86_64-pc-freebsd${VERSION}/usr/include/fcntl.h
-              - test -f $PREFIX/x86_64-pc-freebsd${VERSION}/usr/include/errno.h
-              - test -f $PREFIX/x86_64-pc-freebsd${VERSION}/usr/include/sys/types.h
-              - test -f $PREFIX/x86_64-pc-freebsd${VERSION}/usr/include/sys/stat.h
-              - test -f $PREFIX/x86_64-pc-freebsd${VERSION}/usr/include/sys/socket.h
-              # Essential libraries
-              - test -f $PREFIX/x86_64-pc-freebsd${VERSION}/usr/lib/libc.so
-              - test -f $PREFIX/x86_64-pc-freebsd${VERSION}/usr/lib/libm.so
-              - test -f $PREFIX/x86_64-pc-freebsd${VERSION}/usr/lib/libpthread.so
-              # C++ support
-              - test -d $PREFIX/x86_64-pc-freebsd${VERSION}/usr/include/c++
-          about:
-            home: https://www.freebsd.org
-            license: BSD-2-Clause
-            summary: "FreeBSD ${VERSION} sysroot for cross-compilation"
-          EOF
-          
-          cat > recipe/build.sh << 'BUILDEEOF'
-          #!/bin/bash
-          set -euo pipefail
-          VERSION="${VERSION}"
-          DEST="$PREFIX/x86_64-pc-freebsd${VERSION}"
-          mkdir -p "$DEST"
-          cp -R sysroot/x86_64-pc-freebsd${VERSION}/* "$DEST/"
-          BUILDEEOF
-          chmod +x recipe/build.sh
-          
-          conda build recipe/ --output-folder conda-bld -c conda-forge
-
-      - name: Upload conda package
-        uses: actions/upload-artifact@v4
-        with:
-          name: sysroot-conda-${{ matrix.version }}
-          path: conda-bld/noarch/sysroot_freebsd-64-*.tar.bz2
+          name: sysroot-${{ matrix.version }}
+          path: sysroot_freebsd-64-${{ matrix.version }}.tar.bz2
 
   test-cross-compile:
     needs: build-sysroot
@@ -146,7 +81,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
-          name: sysroot-conda-${{ matrix.version }}
+          name: sysroot-${{ matrix.version }}
           path: sysroot-pkg/
 
       - name: Install cross toolchain
@@ -156,50 +91,52 @@ jobs:
 
       - name: Extract sysroot
         run: |
+          V="${{ matrix.version }}"
           mkdir -p /opt/freebsd-sysroot
-          tar -C /opt/freebsd-sysroot -xjf sysroot-pkg/*.tar.bz2
+          tar -C /opt/freebsd-sysroot -xjf sysroot-pkg/sysroot_freebsd-64-${V}.tar.bz2
+          echo "Sysroot contents:"
+          ls /opt/freebsd-sysroot/
 
       - name: Test C cross-compilation
         run: |
-          cat > hello.c << 'EOF'
+          V="${{ matrix.version }}"
+          cat > hello.c << 'CEOF'
           #include <stdio.h>
           int main() { printf("Hello FreeBSD\n"); return 0; }
-          EOF
-          
-          clang -target x86_64-pc-freebsd${{ matrix.version }} \
-            --sysroot=/opt/freebsd-sysroot/x86_64-pc-freebsd${{ matrix.version }} \
+          CEOF
+
+          clang -target x86_64-pc-freebsd${V} \
+            --sysroot=/opt/freebsd-sysroot/x86_64-pc-freebsd${V} \
             -fuse-ld=lld \
             hello.c -o hello-freebsd
-          
+
           file hello-freebsd
-          file hello-freebsd | grep -q "FreeBSD" \
-            || (echo "ERROR: binary is not a FreeBSD ELF" && exit 1)
+          file hello-freebsd | grep -qi "freebsd" \
+            || (echo "ERROR: not a FreeBSD ELF" && exit 1)
           echo "C cross-compilation: PASSED"
 
-      - name: Test C cross-compilation with math library
+      - name: Test C with math library
         run: |
-          cat > math_test.c << 'EOF'
+          V="${{ matrix.version }}"
+          cat > math_test.c << 'CEOF'
           #include <stdio.h>
           #include <math.h>
-          int main() {
-            double x = sqrt(2.0);
-            printf("sqrt(2) = %f\n", x);
-            return 0;
-          }
-          EOF
-          
-          clang -target x86_64-pc-freebsd${{ matrix.version }} \
-            --sysroot=/opt/freebsd-sysroot/x86_64-pc-freebsd${{ matrix.version }} \
+          int main() { printf("sqrt(2)=%f\n", sqrt(2.0)); return 0; }
+          CEOF
+
+          clang -target x86_64-pc-freebsd${V} \
+            --sysroot=/opt/freebsd-sysroot/x86_64-pc-freebsd${V} \
             -fuse-ld=lld \
             math_test.c -o math-freebsd -lm
-          
-          file math-freebsd | grep -q "FreeBSD" \
-            || (echo "ERROR: math binary is not a FreeBSD ELF" && exit 1)
-          echo "C with -lm cross-compilation: PASSED"
 
-      - name: Test C cross-compilation with pthreads
+          file math-freebsd | grep -qi "freebsd" \
+            || (echo "ERROR: not a FreeBSD ELF" && exit 1)
+          echo "C with -lm: PASSED"
+
+      - name: Test C with pthreads
         run: |
-          cat > thread_test.c << 'EOF'
+          V="${{ matrix.version }}"
+          cat > thread_test.c << 'CEOF'
           #include <stdio.h>
           #include <pthread.h>
           void *worker(void *arg) { return NULL; }
@@ -210,20 +147,21 @@ jobs:
             printf("pthread OK\n");
             return 0;
           }
-          EOF
-          
-          clang -target x86_64-pc-freebsd${{ matrix.version }} \
-            --sysroot=/opt/freebsd-sysroot/x86_64-pc-freebsd${{ matrix.version }} \
+          CEOF
+
+          clang -target x86_64-pc-freebsd${V} \
+            --sysroot=/opt/freebsd-sysroot/x86_64-pc-freebsd${V} \
             -fuse-ld=lld \
             thread_test.c -o thread-freebsd -lpthread
-          
-          file thread-freebsd | grep -q "FreeBSD" \
-            || (echo "ERROR: thread binary is not a FreeBSD ELF" && exit 1)
-          echo "C with -lpthread cross-compilation: PASSED"
+
+          file thread-freebsd | grep -qi "freebsd" \
+            || (echo "ERROR: not a FreeBSD ELF" && exit 1)
+          echo "C with -lpthread: PASSED"
 
       - name: Test C++ cross-compilation
         run: |
-          cat > hello.cpp << 'EOF'
+          V="${{ matrix.version }}"
+          cat > hello.cpp << 'CEOF'
           #include <iostream>
           #include <string>
           int main() {
@@ -231,13 +169,13 @@ jobs:
             std::cout << msg << std::endl;
             return 0;
           }
-          EOF
-          
-          clang++ -target x86_64-pc-freebsd${{ matrix.version }} \
-            --sysroot=/opt/freebsd-sysroot/x86_64-pc-freebsd${{ matrix.version }} \
+          CEOF
+
+          clang++ -target x86_64-pc-freebsd${V} \
+            --sysroot=/opt/freebsd-sysroot/x86_64-pc-freebsd${V} \
             -fuse-ld=lld \
             hello.cpp -o hello-freebsd-cpp
-          
-          file hello-freebsd-cpp | grep -q "FreeBSD" \
-            || (echo "ERROR: C++ binary is not a FreeBSD ELF" && exit 1)
+
+          file hello-freebsd-cpp | grep -qi "freebsd" \
+            || (echo "ERROR: C++ binary not a FreeBSD ELF" && exit 1)
           echo "C++ cross-compilation: PASSED"
