@@ -232,7 +232,8 @@ jobs:
         run: |
           rattler-build build \
             --recipe recipe/recipe.yaml \
-            --output-dir conda-bld
+            --output-dir conda-bld \
+            --allow-symlinks-on-windows
           echo "Built packages:"
           find conda-bld -name '*.conda' -o -name '*.tar.bz2' | head -20
 
