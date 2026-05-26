@@ -203,6 +203,7 @@ jobs:
       - name: Prepare recipe and source
         run: |
           V="${{ matrix.version }}"
+          SYSROOT_SRC="$(pwd)/sysroot_src"
           mkdir -p recipe sysroot_src
           tar -C sysroot_src -xjf sysroot_freebsd-64-${V}.tar.bz2
 
@@ -219,7 +220,7 @@ jobs:
             noarch: generic
             script:
               - mkdir -p "\$PREFIX/x86_64-pc-freebsd${V}"
-              - cp -R sysroot_src/x86_64-pc-freebsd${V}/. "\$PREFIX/x86_64-pc-freebsd${V}/"
+              - cp -R "${SYSROOT_SRC}/x86_64-pc-freebsd${V}/." "\$PREFIX/x86_64-pc-freebsd${V}/"
 
           about:
             homepage: https://www.freebsd.org
