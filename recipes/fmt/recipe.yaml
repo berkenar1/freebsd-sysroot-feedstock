@@ -1,0 +1,39 @@
+context:
+  version: "10.2.1"
+  target: "x86_64-pc-freebsd14.4"
+  sysroot: "/home/berke/Work/freebsd-sysroot-feedstock/sysroot/x86_64-pc-freebsd14.4"
+
+package:
+  name: fmt
+  version: ${{ version }}
+
+source:
+  url: https://github.com/fmtlib/fmt/archive/refs/tags/${{ version }}.tar.gz
+
+build:
+  number: 0
+  dynamic_linking:
+    binary_relocation: false
+  script:
+    - mkdir build && cd build
+    - >
+      cmake ..
+      -GNinja
+      -DCMAKE_BUILD_TYPE=Release
+      -DCMAKE_INSTALL_PREFIX=$PREFIX
+      -DCMAKE_C_COMPILER=clang
+      -DCMAKE_CXX_COMPILER=clang++
+      -DCMAKE_C_COMPILER_TARGET=${{ target }}
+      -DCMAKE_CXX_COMPILER_TARGET=${{ target }}
+      -DCMAKE_SYSROOT=${{ sysroot }}
+      -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=lld"
+      -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=lld"
+      -DFMT_TEST=OFF
+      -DFMT_DOC=OFF
+      -DBUILD_SHARED_LIBS=ON
+    - ninja install
+
+about:
+  homepage: https://fmt.dev
+  license: MIT
+  summary: A modern formatting library (freebsd-64 cross-compiled)

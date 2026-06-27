@@ -1,0 +1,76 @@
+context:
+  version: "2.1.0"
+  target: "x86_64-pc-freebsd14.4"
+  sysroot: ${{ env.SYSROOT | default("/opt/freebsd-sysroot/x86_64-pc-freebsd14.4") }}
+
+package:
+  name: micromamba
+  version: ${{ version }}
+
+source:
+  url: https://github.com/mamba-org/mamba/archive/refs/tags/${{ version }}.tar.gz
+  patches:
+    - patches/patch-libmamba_CMakeLists.txt
+    - patches/patch-libmamba_include_mamba_specs_platform.hpp
+    - patches/patch-libmamba_include_mamba_util_build.hpp
+    - patches/patch-libmamba_include_mamba_util_os__freebsd.hpp
+    - patches/patch-libmamba_src_core_util_os.cpp
+    - patches/patch-libmamba_src_core_virtual_packages.cpp
+    - patches/patch-libmamba_src_specs_match_spec.cpp
+    - patches/patch-libmamba_src_specs_platform.cpp
+    - patches/patch-libmamba_src_util_os__freebsd.cpp
+
+build:
+  number: 0
+  dynamic_linking:
+    binary_relocation: false
+  script:
+    - python3 -c "import pathlib; p = pathlib.Path('libmamba/src/solver/libsolv/helpers.cpp'); p.write_text(p.read_text().replace('parser.load(filename)', 'parser.load(filename.string())'))"
+    - python3 -c "import pathlib; p = pathlib.Path('cmake/Checks.cmake'); p.write_text('function(mamba_target_check_type target expected_type log_level)\nendfunction()\n')"
+    - python3 -c "import pathlib; p = pathlib.Path('CMakeLists.txt'); p.write_text(p.read_text().replace('set(BUILD_STATIC ON)', '# set(BUILD_STATIC ON)'))"
+    - python3 -c "import pathlib; p = pathlib.Path('micromamba/CMakeLists.txt'); text = p.read_text().replace('if(BUILD_STATIC)', 'if(BUILD_SHARED)').replace('mambaexe_create_target(micromamba STATIC micromamba)', 'mambaexe_create_target(micromamba SHARED micromamba)'); p.write_text(text)"
+    - export PKG_CONFIG_LIBDIR=$PREFIX/lib/pkgconfig:$PREFIX/share/pkgconfig
+    - export PKG_CONFIG_PATH=""
+    - mkdir build && cd build
+    - >
+      cmake ..
+      -GNinja
+      -DCMAKE_BUILD_TYPE=Release
+      -DCMAKE_INSTALL_PREFIX=$PREFIX
+      -DCMAKE_PREFIX_PATH=$PREFIX
+      -DCMAKE_C_COMPILER=clang
+      -DCMAKE_CXX_COMPILER=clang++
+      -DCMAKE_C_COMPILER_TARGET=${{ target }}
+      -DCMAKE_CXX_COMPILER_TARGET=${{ target }}
+      -DCMAKE_SYSROOT=${{ sysroot }}
+      -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=lld"
+      -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=lld"
+      -DBUILD_LIBMAMBA=ON
+      -DBUILD_STATIC=OFF
+      -DBUILD_SHARED=ON
+      -DBUILD_MICROMAMBA=ON
+      -DBUILD_LIBMAMBAPY=OFF
+      -DMICROMAMBA_LINKAGE=SHARED
+      -DMAMBA_NO_KEYRING=ON
+      -DMAMBA_DISABLE_CURL_MULTI_WAIT=ON
+    - ninja
+    - install -Dm755 micromamba/micromamba $PREFIX/bin/micromamba
+    # Verify the binary targets FreeBSD
+    - file $PREFIX/bin/micromamba
+    - >
+      file $PREFIX/bin/micromamba | grep -qi "freebsd"
+      || (echo "ERROR: micromamba is not a FreeBSD ELF" && exit 1)
+    - echo "micromamba ELF check PASSED"
+
+requirements:
+  host:
+    - fmt
+    - reproc
+    - yaml-cpp
+    - simdjson
+    - libsolv
+
+about:
+  homepage: https://github.com/mamba-org/mamba
+  license: BSD-3-Clause
+  summary: Fast cross-platform package manager — static FreeBSD binary (freebsd-64)

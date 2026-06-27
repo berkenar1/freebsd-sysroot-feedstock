@@ -1,0 +1,28 @@
+context:
+  version: "3.0.14"
+  target: "x86_64-pc-freebsd14.4"
+  sysroot: ${{ env.SYSROOT | default("/opt/freebsd-sysroot/x86_64-pc-freebsd14.4") }}
+
+package:
+  name: openssl
+  version: ${{ version }}
+
+source:
+  url: https://github.com/openssl/openssl/releases/download/openssl-${{ version }}/openssl-${{ version }}.tar.gz
+
+build:
+  number: 0
+  dynamic_linking:
+    binary_relocation: false
+  script:
+    - export CC="clang -target ${{ target }} --sysroot=${{ sysroot }}"
+    - export AR="llvm-ar"
+    - export RANLIB="llvm-ranlib"
+    - ./Configure BSD-x86_64 --prefix=$PREFIX --openssldir=$PREFIX/ssl shared no-zlib
+    - make -j${{ CPU_COUNT }}
+    - make install_sw
+
+about:
+  homepage: https://www.openssl.org
+  license: Apache-2.0
+  summary: Secure Sockets Layer and cryptography libraries and tools (freebsd-64 cross-compiled)

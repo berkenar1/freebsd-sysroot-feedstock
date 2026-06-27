@@ -1,0 +1,43 @@
+context:
+  version: "3.46.0"
+  target: "x86_64-pc-freebsd14.4"
+  sysroot: ${{ env.SYSROOT | default("/opt/freebsd-sysroot/x86_64-pc-freebsd14.4") }}
+
+package:
+  name: sqlite
+  version: ${{ version }}
+
+source:
+  url: https://www.sqlite.org/2024/sqlite-autoconf-3460000.tar.gz
+
+build:
+  number: 0
+  dynamic_linking:
+    binary_relocation: false
+  script:
+    - export CC="clang -target ${{ target }} --sysroot=${{ sysroot }}"
+    - export CXX="clang++ -target ${{ target }} --sysroot=${{ sysroot }}"
+    - export AR="llvm-ar"
+    - export LD="ld.lld"
+    - export RANLIB="llvm-ranlib"
+    - export CPPFLAGS="-I$PREFIX/include"
+    - export LDFLAGS="-L$PREFIX/lib"
+    - >
+      ./configure
+      --host=${{ target }}
+      --build=x86_64-unknown-linux-gnu
+      --prefix=$PREFIX
+      --disable-static
+      --enable-readline
+    - make -j${{ CPU_COUNT }}
+    - make install
+
+requirements:
+  host:
+    - readline
+    - zlib
+
+about:
+  homepage: https://www.sqlite.org
+  license: LicenseRef-Public-Domain
+  summary: Command-line interface for SQLite (freebsd-64 cross-compiled)

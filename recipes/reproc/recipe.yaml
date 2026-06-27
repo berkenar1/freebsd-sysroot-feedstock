@@ -1,0 +1,40 @@
+context:
+  version: "14.2.4"
+  target: "x86_64-pc-freebsd14.4"
+  sysroot: ${{ env.SYSROOT | default("/opt/freebsd-sysroot/x86_64-pc-freebsd14.4") }}
+
+package:
+  name: reproc
+  version: ${{ version }}
+
+source:
+  url: https://github.com/DaanDeMeyer/reproc/archive/refs/tags/v${{ version }}.tar.gz
+
+build:
+  number: 0
+  dynamic_linking:
+    binary_relocation: false
+  script:
+    - mkdir build && cd build
+    - >
+      cmake ..
+      -GNinja
+      -DCMAKE_BUILD_TYPE=Release
+      -DCMAKE_INSTALL_PREFIX=$PREFIX
+      -DCMAKE_C_COMPILER=clang
+      -DCMAKE_CXX_COMPILER=clang++
+      -DCMAKE_C_COMPILER_TARGET=${{ target }}
+      -DCMAKE_CXX_COMPILER_TARGET=${{ target }}
+      -DCMAKE_SYSROOT=${{ sysroot }}
+      -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=lld"
+      -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=lld"
+      -DREPROC++=ON
+      -DBUILD_SHARED_LIBS=ON
+      -DREPROC_TEST=OFF
+      -DREPROC_EXAMPLES=OFF
+    - ninja install
+
+about:
+  homepage: https://github.com/DaanDeMeyer/reproc
+  license: MIT
+  summary: Process I/O library (freebsd-64 cross-compiled)

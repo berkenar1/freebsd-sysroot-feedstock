@@ -1,0 +1,58 @@
+context:
+  version: "3.11.9"
+  target: "x86_64-pc-freebsd14.4"
+  sysroot: "/home/berke/Work/freebsd-sysroot-feedstock/sysroot/x86_64-pc-freebsd14.4"
+
+package:
+  name: python
+  version: ${{ version }}
+
+source:
+  url: https://www.python.org/ftp/python/${{ version }}/Python-${{ version }}.tar.xz
+
+build:
+  number: 0
+  dynamic_linking:
+    binary_relocation: false
+  script:
+    - python3 -c 'import pathlib; p = pathlib.Path("configure"); t = p.read_text().replace("\r\n", "\n"); t = t.replace("*-*-linux-android*)", "*-*-freebsd*)\n\t\tac_sys_system=FreeBSD\n\t\t;;\n\t*-*-linux-android*)"); t = t.replace("*-*-linux*)\n\t\tcase \"$host_cpu\" in", "*-*-freebsd*)\n\t\t_host_cpu=$host_cpu\n\t\t;;\n\t*-*-linux*)\n\t\tcase \"$host_cpu\" in"); t = t.replace("PYTHONPATH=$(shell test -f pybuilddir.txt && echo $(abs_builddir)/`cat pybuilddir.txt`:)$(srcdir)/Lib", "PYTHONPATH=$(abs_builddir)/build/lib.freebsd-x86_64-3.11:$(srcdir)/Lib"); p.write_text(t)'
+    - python3 -c 'import pathlib; p = pathlib.Path("Makefile.pre.in"); p.write_text(p.read_text().replace("-j0", "-j 1"))'
+    - export CC="clang -target ${{ target }} --sysroot=${{ sysroot }}"
+    - export CXX="clang++ -target ${{ target }} --sysroot=${{ sysroot }}"
+    - export AR="llvm-ar"
+    - export LD="ld.lld"
+    - export READELF="llvm-readelf"
+    - export CPPFLAGS="-I$PREFIX/include"
+    - export LDFLAGS="-L$PREFIX/lib -fuse-ld=lld"
+    - export PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig:$PREFIX/share/pkgconfig"
+    - export HOST_PYTHON=$(which python3)
+    - >
+      ./configure
+      --host=${{ target }}
+      --build=x86_64-unknown-linux-gnu
+      --prefix=$PREFIX
+      --with-build-python=$HOST_PYTHON
+      --with-system-ffi
+      --with-openssl=$PREFIX
+      --with-sqlite3=$PREFIX
+      --without-ensurepip
+      ac_cv_file__dev_ptmx=yes
+      ac_cv_file__dev_ptc=no
+      ac_cv_buggy_getaddrinfo=no
+    - make -j${{ CPU_COUNT }}
+    - make install
+
+requirements:
+  host:
+    - zlib
+    - openssl
+    - libffi
+    - sqlite
+    - readline
+    - xz
+    - bzip2
+
+about:
+  homepage: https://www.python.org
+  license: Python-2.0
+  summary: General-purpose programming language (freebsd-64 cross-compiled)

@@ -1,0 +1,36 @@
+context:
+  version: "0.3.27"
+  target: "x86_64-pc-freebsd14.4"
+  sysroot: "/home/berke/Work/freebsd-sysroot-feedstock/sysroot/x86_64-pc-freebsd14.4"
+
+package:
+  name: openblas
+  version: ${{ version }}
+
+source:
+  url: https://github.com/OpenMathLib/OpenBLAS/archive/refs/tags/v${{ version }}.tar.gz
+
+build:
+  number: 0
+  dynamic_linking:
+    binary_relocation: false
+  script:
+    - export CC="clang -target ${{ target }} --sysroot=${{ sysroot }} -fPIC"
+    - export CXX="clang++ -target ${{ target }} --sysroot=${{ sysroot }} -fPIC"
+    - export AR="llvm-ar"
+    - export LD="ld.lld"
+    - export RANLIB="llvm-ranlib"
+    - >
+      gmake -j${{ CPU_COUNT }}
+      CC="$CC"
+      FC=""
+      HOSTCC=clang
+      NOFORTRAN=1
+      TARGET=CORE2
+      BINARY=64
+    - gmake install PREFIX=$PREFIX NOFORTRAN=1
+
+about:
+  homepage: https://www.openblas.net/
+  license: BSD-3-Clause
+  summary: An optimized BLAS library based on GotoBLAS2 1.13 BSD version (freebsd-64 cross-compiled)

@@ -1,0 +1,39 @@
+context:
+  version: "0.8.0"
+  target: "x86_64-pc-freebsd14.4"
+  sysroot: ${{ env.SYSROOT | default("/opt/freebsd-sysroot/x86_64-pc-freebsd14.4") }}
+
+package:
+  name: yaml-cpp
+  version: ${{ version }}
+
+source:
+  url: https://github.com/jbeder/yaml-cpp/archive/refs/tags/${{ version }}.tar.gz
+
+build:
+  number: 0
+  dynamic_linking:
+    binary_relocation: false
+  script:
+    - mkdir build && cd build
+    - >
+      cmake ..
+      -GNinja
+      -DCMAKE_BUILD_TYPE=Release
+      -DCMAKE_INSTALL_PREFIX=$PREFIX
+      -DCMAKE_C_COMPILER=clang
+      -DCMAKE_CXX_COMPILER=clang++
+      -DCMAKE_C_COMPILER_TARGET=${{ target }}
+      -DCMAKE_CXX_COMPILER_TARGET=${{ target }}
+      -DCMAKE_SYSROOT=${{ sysroot }}
+      -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=lld"
+      -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=lld"
+      -DYAML_CPP_BUILD_TESTS=OFF
+      -DYAML_CPP_BUILD_TOOLS=OFF
+      -DBUILD_SHARED_LIBS=ON
+    - ninja install
+
+about:
+  homepage: https://github.com/jbeder/yaml-cpp
+  license: MIT
+  summary: YAML parser and emitter in C++ (freebsd-64 cross-compiled)

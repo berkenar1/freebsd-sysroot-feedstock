@@ -1,0 +1,18 @@
+--- libmamba/CMakeLists.txt.orig	2024-12-11 11:32:41 UTC
++++ libmamba/CMakeLists.txt
+@@ -156,6 +156,7 @@ set(
+     ${LIBMAMBA_SOURCE_DIR}/util/environment.cpp
+     ${LIBMAMBA_SOURCE_DIR}/util/os_linux.cpp
+     ${LIBMAMBA_SOURCE_DIR}/util/os_osx.cpp
++    ${LIBMAMBA_SOURCE_DIR}/util/os_freebsd.cpp
+     ${LIBMAMBA_SOURCE_DIR}/util/os_unix.cpp
+     ${LIBMAMBA_SOURCE_DIR}/util/os_win.cpp
+     ${LIBMAMBA_SOURCE_DIR}/util/parsers.cpp
+@@ -216,6 +217,7 @@ set(
+     ${LIBMAMBA_INCLUDE_DIR}/mamba/util/loop_control.hpp
+     ${LIBMAMBA_INCLUDE_DIR}/mamba/util/os_linux.hpp
+     ${LIBMAMBA_INCLUDE_DIR}/mamba/util/os_osx.hpp
++    ${LIBMAMBA_INCLUDE_DIR}/mamba/util/os_freebsd.hpp
+     ${LIBMAMBA_INCLUDE_DIR}/mamba/util/os_unix.hpp
+     ${LIBMAMBA_INCLUDE_DIR}/mamba/util/os_win.hpp
+     ${LIBMAMBA_INCLUDE_DIR}/mamba/util/os.hpp

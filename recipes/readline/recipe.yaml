@@ -1,0 +1,36 @@
+context:
+  version: "8.2"
+  target: "x86_64-pc-freebsd14.4"
+  sysroot: ${{ env.SYSROOT | default("/opt/freebsd-sysroot/x86_64-pc-freebsd14.4") }}
+
+package:
+  name: readline
+  version: ${{ version }}
+
+source:
+  url: https://ftp.gnu.org/gnu/readline/readline-${{ version }}.tar.gz
+
+build:
+  number: 0
+  dynamic_linking:
+    binary_relocation: false
+  script:
+    - export CC="clang -target ${{ target }} --sysroot=${{ sysroot }}"
+    - export CXX="clang++ -target ${{ target }} --sysroot=${{ sysroot }}"
+    - export AR="llvm-ar"
+    - export LD="ld.lld"
+    - export RANLIB="llvm-ranlib"
+    - >
+      ./configure
+      --host=${{ target }}
+      --build=x86_64-unknown-linux-gnu
+      --prefix=$PREFIX
+      --with-curses
+      --disable-static
+    - make -j${{ CPU_COUNT }} SHLIB_LIBS="-lncursesw"
+    - make install
+
+about:
+  homepage: https://tiswww.cwru.edu/php/chet/readline/rltop.html
+  license: GPL-3.0-or-later
+  summary: GNU Readline library (freebsd-64 cross-compiled)

@@ -1,0 +1,36 @@
+context:
+  version: "5.6.2"
+  target: "x86_64-pc-freebsd14.4"
+  sysroot: ${{ env.SYSROOT | default("/opt/freebsd-sysroot/x86_64-pc-freebsd14.4") }}
+
+package:
+  name: xz
+  version: ${{ version }}
+
+source:
+  url: https://github.com/tukaani-project/xz/releases/download/v${{ version }}/xz-${{ version }}.tar.gz
+
+build:
+  number: 0
+  dynamic_linking:
+    binary_relocation: false
+  script:
+    - export CC="clang -target ${{ target }} --sysroot=${{ sysroot }}"
+    - export CXX="clang++ -target ${{ target }} --sysroot=${{ sysroot }}"
+    - export AR="llvm-ar"
+    - export LD="ld.lld"
+    - export RANLIB="llvm-ranlib"
+    - >
+      ./configure
+      --host=${{ target }}
+      --build=x86_64-unknown-linux-gnu
+      --prefix=$PREFIX
+      --disable-doc
+      --disable-nls
+    - make -j${{ CPU_COUNT }}
+    - make install
+
+about:
+  homepage: https://tukaani.org/xz/
+  license: LicenseRef-Public-Domain
+  summary: Free general-purpose data compression software with high compression ratio (freebsd-64 cross-compiled)
