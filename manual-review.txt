@@ -1,0 +1,763 @@
+alsa-lib-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+alsa-lib-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+alsa-lib-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+alsa-lib-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+alsa-lib-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+alsa-lib-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+anaconda-ai : noarch package with potential platform-specific post-link or packaging code.
+anaconda-anon-usage : noarch package with potential platform-specific post-link or packaging code.
+anaconda-assistant-conda : noarch package with potential platform-specific post-link or packaging code.
+anaconda-assistant-sdk : noarch package with potential platform-specific post-link or packaging code.
+anaconda-auth : noarch package with potential platform-specific post-link or packaging code.
+anaconda-catalogs : noarch package with potential platform-specific post-link or packaging code.
+anaconda-clean : noarch package with potential platform-specific post-link or packaging code.
+anaconda-cli-base : noarch package with potential platform-specific post-link or packaging code.
+anaconda-cloud : noarch package with potential platform-specific post-link or packaging code.
+anaconda-cloud-auth : noarch package with potential platform-specific post-link or packaging code.
+anaconda-cloud-cli : noarch package with potential platform-specific post-link or packaging code.
+at-spi-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+at-spi-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+at-spi-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+at-spi-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+at-spi-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+at-spi-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+atk-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+atk-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+atk-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+atk-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+atk-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+atk-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+audit-libs-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+audit-libs-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+audit-libs-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+audit-libs-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+audit-libs-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+audit-libs-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+ca-certificates-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+ca-certificates-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+ca-certificates-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+cairo-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+cairo-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+cairo-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+cairo-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+cairo-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+cairo-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+cargo-llvm-cov : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+carterbox-torch-radon : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btorch\b'.
+centos-release-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+centos-release-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+centos-release-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+chkconfig-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+chkconfig-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+chkconfig-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+clang-11 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-12 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-13 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-14 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-15 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-16 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-17 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-18 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-19 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-20 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-21 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-22 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-9 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-format : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-format-12 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-format-13 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-format-14 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-format-15 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-format-16 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-format-17 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-format-18 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-format-19 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-format-20 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-format-21 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-format-22 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-no-conda-cfg : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-scan-deps : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+clang-tools : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+conda-auth : noarch package with potential platform-specific post-link or packaging code.
+conda-completer : noarch package with potential platform-specific post-link or packaging code.
+conda-completion : noarch package with potential platform-specific post-link or packaging code.
+conda-content-trust : noarch package with potential platform-specific post-link or packaging code.
+conda-docker : noarch package with potential platform-specific post-link or packaging code.
+conda-export : noarch package with potential platform-specific post-link or packaging code.
+conda-flow : noarch package with potential platform-specific post-link or packaging code.
+conda-forge-feedstock-check-solvable : noarch package with potential platform-specific post-link or packaging code.
+conda-forge-feedstock-ops : noarch package with potential platform-specific post-link or packaging code.
+conda-forge-metadata : noarch package with potential platform-specific post-link or packaging code.
+conda-forge-pinning : noarch package with potential platform-specific post-link or packaging code.
+conda-forge-repodata-patches : noarch package with potential platform-specific post-link or packaging code.
+conda-forge-tick : noarch package with potential platform-specific post-link or packaging code.
+conda-global : noarch package with potential platform-specific post-link or packaging code.
+conda-index : noarch package with potential platform-specific post-link or packaging code.
+conda-inject : noarch package with potential platform-specific post-link or packaging code.
+conda-libmamba-solver : noarch package with potential platform-specific post-link or packaging code.
+conda-lock : noarch package with potential platform-specific post-link or packaging code.
+conda-lockfiles : noarch package with potential platform-specific post-link or packaging code.
+conda-merge : noarch package with potential platform-specific post-link or packaging code.
+conda-meta-mcp : noarch package with potential platform-specific post-link or packaging code.
+conda-minify : noarch package with potential platform-specific post-link or packaging code.
+conda-oci-mirror : noarch package with potential platform-specific post-link or packaging code.
+conda-package-streaming : noarch package with potential platform-specific post-link or packaging code.
+conda-poetry-liaison : noarch package with potential platform-specific post-link or packaging code.
+conda-prefix-replacement : noarch package with potential platform-specific post-link or packaging code.
+conda-project : noarch package with potential platform-specific post-link or packaging code.
+conda-protect : noarch package with potential platform-specific post-link or packaging code.
+conda-rattler-solver : noarch package with potential platform-specific post-link or packaging code.
+conda-recipe-manager : noarch package with potential platform-specific post-link or packaging code.
+conda-recipe-upstream-validator : noarch package with potential platform-specific post-link or packaging code.
+conda-recipe-v2-schema : noarch package with potential platform-specific post-link or packaging code.
+conda-replicate : noarch package with potential platform-specific post-link or packaging code.
+conda-self : noarch package with potential platform-specific post-link or packaging code.
+conda-souschef : noarch package with potential platform-specific post-link or packaging code.
+conda-spawn : noarch package with potential platform-specific post-link or packaging code.
+conda-sphinx-theme : noarch package with potential platform-specific post-link or packaging code.
+conda-store : noarch package with potential platform-specific post-link or packaging code.
+conda-store-server : noarch package with potential platform-specific post-link or packaging code.
+conda-suggest : noarch package with potential platform-specific post-link or packaging code.
+conda-trampoline : noarch package with potential platform-specific post-link or packaging code.
+conda-tree : noarch package with potential platform-specific post-link or packaging code.
+conda-vendor : noarch package with potential platform-specific post-link or packaging code.
+conda-which : noarch package with potential platform-specific post-link or packaging code.
+conda-workspaces : noarch package with potential platform-specific post-link or packaging code.
+conda_envfile : noarch package with potential platform-specific post-link or packaging code.
+conda_subprocess : noarch package with potential platform-specific post-link or packaging code.
+condansis : noarch package with potential platform-specific post-link or packaging code.
+condastats : noarch package with potential platform-specific post-link or packaging code.
+condax : noarch package with potential platform-specific post-link or packaging code.
+copy-jdk-configs-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+copy-jdk-configs-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+copy-jdk-configs-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+cracklib-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+cracklib-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+cracklib-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+cracklib-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+cracklib-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+cracklib-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+cracklib-dicts-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+cracklib-dicts-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+cracklib-dicts-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+cups-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+cups-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+cups-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+cups-libs-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+cups-libs-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+cups-libs-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+dparse-with-conda : noarch package with potential platform-specific post-link or packaging code.
+edgetest-conda : noarch package with potential platform-specific post-link or packaging code.
+ensureconda : noarch package with potential platform-specific post-link or packaging code.
+expat-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+expat-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+expat-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+expat-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+expat-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+expat-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+ezconda : noarch package with potential platform-specific post-link or packaging code.
+fontconfig-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+fontconfig-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+fontconfig-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+fontconfig-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+fontconfig-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+fontconfig-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+fonts-conda-ecosystem : noarch package with potential platform-specific post-link or packaging code.
+fonts-conda-forge : noarch package with potential platform-specific post-link or packaging code.
+freetype-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+freetype-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+freetype-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+freetype-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+freetype-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+freetype-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+fribidi-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+fribidi-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+fribidi-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+gconf2-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+gconf2-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+gconf2-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+glib-networking-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+glib-networking-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+glib-networking-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+glib2-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+glib2-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+glib2-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+glib2-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+glib2-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+glib2-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+gtk2-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+gtk2-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+gtk2-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+gtk2-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+gtk2-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+gtk2-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+gtkmm24-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+gtkmm24-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+gtkmm24-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+gtkmm24-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+gtkmm24-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+gtkmm24-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+gymnasium-torch : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btorch\b'.
+harfbuzz-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+harfbuzz-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+harfbuzz-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+hatch-conda : noarch package with potential platform-specific post-link or packaging code.
+helios-menuinst : noarch package with potential platform-specific post-link or packaging code.
+heyoka-llvm-11 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+heyoka-llvm-12 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+heyoka-llvm-13 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+heyoka-llvm-14 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+heyoka-llvm-15 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+heyoka-llvm-16 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+heyoka-llvm-17 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+heyoka-llvm-18 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+heyoka-llvm-19 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+heyoka-llvm-20 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+ibacm-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+ibacm-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+ibacm-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+intel-opencl-clang : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bclang\b'.
+java-1.7.0-openjdk-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+java-1.7.0-openjdk-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+java-1.7.0-openjdk-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+java-1.7.0-openjdk-headless-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+java-1.7.0-openjdk-headless-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+java-1.7.0-openjdk-headless-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+javapackages-tools-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+javapackages-tools-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+javapackages-tools-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+kernel-headers-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+kernel-headers-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+kernel-headers-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+kmod-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+kmod-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+kmod-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+kmod-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+kmod-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+kmod-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+kmod-libs-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+kmod-libs-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+kmod-libs-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+kubernetes-node : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bnode\b'.
+lbcondawrappers : noarch package with potential platform-specific post-link or packaging code.
+libbonobo-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libbonobo-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libbonobo-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libbonobo-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libbonobo-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libbonobo-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libdrm-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libdrm-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libdrm-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libdrm-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libdrm-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libdrm-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libeconf-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libeconf-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libeconf-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libeconf-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libeconf-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libeconf-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-core-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-core-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-core-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-egl-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-egl-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-egl-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-gles-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-gles-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-gles-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-glx-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-glx-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-glx-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-opengl-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-opengl-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libglvnd-opengl-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libibmad-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libibmad-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libibmad-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libibmad-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libibmad-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libibmad-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libibumad-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libibumad-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libibumad-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libibverbs-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libibverbs-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libibverbs-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libice-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libice-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libice-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libice-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libice-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libice-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libidl-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libidl-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libidl-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libidl-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libidl-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libidl-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libjpeg-turbo-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libjpeg-turbo-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libjpeg-turbo-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libmambapy-stubs : noarch package with potential platform-specific post-link or packaging code.
+libmetatensor-torch : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btorch\b'.
+libmetatomic-torch : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btorch\b'.
+libnl-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libnl-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libnl-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libnl-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libnl-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libnl-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libnl3-cli-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libnl3-cli-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libnl3-cli-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libnl3-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libnl3-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libnl3-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libnl3-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libnl3-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libnl3-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libopenvino-tensorflow-frontend : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btensorflow\b'.
+libopenvino-tensorflow-lite-frontend : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btensorflow\b'.
+libpng-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libpng-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libpng-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libpng-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libpng-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libpng-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libpwquality-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libpwquality-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libpwquality-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libpwquality-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libpwquality-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libpwquality-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+librdmacm-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+librdmacm-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+librdmacm-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libselinux-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libselinux-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libselinux-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libselinux-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libselinux-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libselinux-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libsepol-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libsepol-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libsepol-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libsepol-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libsepol-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libsepol-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libsm-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libsm-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libsm-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libsm-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libsm-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libsm-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libsoup-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libsoup-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libsoup-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libsoup-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libsoup-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libsoup-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libthai-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libthai-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libthai-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libtiff-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libtiff-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libtiff-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libuuid-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libuuid-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libuuid-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libuuid-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libuuid-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libuuid-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libx11-common-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libx11-common-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libx11-common-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libx11-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libx11-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libx11-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libx11-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libx11-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libx11-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxau-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxau-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxau-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxau-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxau-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxau-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxcb-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxcb-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxcb-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxcb-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxcb-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxcb-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxcomposite-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxcomposite-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxcomposite-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxcomposite-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxcomposite-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxcomposite-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxcursor-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxcursor-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxcursor-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxcursor-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxcursor-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxcursor-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxdamage-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxdamage-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxdamage-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxdamage-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxdamage-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxdamage-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxext-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxext-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxext-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxext-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxext-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxext-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxfixes-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxfixes-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxfixes-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxfixes-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxfixes-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxfixes-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxft-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxft-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxft-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxft-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxft-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxft-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxi-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxi-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxi-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxi-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxi-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxi-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxinerama-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxinerama-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxinerama-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxinerama-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxinerama-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxinerama-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxkbcommon-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxkbcommon-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxkbcommon-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxkbcommon-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxkbcommon-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxkbcommon-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxml2-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxml2-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxml2-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxml2-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxml2-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxml2-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxrandr-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxrandr-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxrandr-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxrandr-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxrandr-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxrandr-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxrender-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxrender-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxrender-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxrender-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxrender-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxrender-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxscrnsaver-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxscrnsaver-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxscrnsaver-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxscrnsaver-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxscrnsaver-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxscrnsaver-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxshmfence-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxshmfence-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxshmfence-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxshmfence-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxshmfence-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxshmfence-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxt-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxt-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxt-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxt-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxt-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxt-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxtst-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxtst-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxtst-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxtst-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxtst-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxtst-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxxf86vm-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxxf86vm-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxxf86vm-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+libxxf86vm-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+libxxf86vm-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+libxxf86vm-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+llvm-openmp : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-spirv : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-spirv-14 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-spirv-15 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-spirv-16 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-spirv-17 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-spirv-18 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-spirv-19 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-spirv-20 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-spirv-21 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-spirv-22 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-tools : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-tools-18 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-tools-19 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-tools-20 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-tools-21 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-tools-22 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+llvm-utils : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+mamba-press : noarch package with potential platform-specific post-link or packaging code.
+mamba_gator : noarch package with potential platform-specific post-link or packaging code.
+mesa-dri-drivers-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-dri-drivers-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+mesa-dri-drivers-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-khr-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-khr-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+mesa-khr-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libegl-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libegl-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+mesa-libegl-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libegl-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libegl-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+mesa-libegl-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libgbm-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libgbm-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+mesa-libgbm-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libgbm-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libgbm-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+mesa-libgbm-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libgl-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libgl-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+mesa-libgl-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libgl-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libgl-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+mesa-libgl-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libglapi-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libglapi-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+mesa-libglapi-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libglu-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+mesa-libglu-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+metadsl-llvm : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+metal-llvm-tools-15 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bllvm\b'.
+modin-ray : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+nds2-client-java : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bjava\b'.
+new_conda_env : noarch package with potential platform-specific post-link or packaging code.
+node-gyp : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bnode\b'.
+node-red : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bnode\b'.
+nspr-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+nspr-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+nspr-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+nss-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+nss-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+nss-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+nss-softokn-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+nss-softokn-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+nss-softokn-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+nss-softokn-freebl-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+nss-softokn-freebl-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+nss-softokn-freebl-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+nss-util-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+nss-util-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+nss-util-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+numactl-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+numactl-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+numactl-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+numactl-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+numactl-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+numactl-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+numactl-libs-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+numactl-libs-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+numactl-libs-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+numba : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bnumba\b'.
+numba-cuda : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bnumba\b'.
+nvmath-python-numba : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bnumba\b'.
+openblas : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bopenblas\b'.
+openblas-ilp64 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bopenblas\b'.
+openmm-torch : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btorch\b'.
+opensm-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+opensm-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+opensm-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+opensm-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+opensm-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+opensm-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+opensm-libs-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+opensm-libs-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+opensm-libs-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+orbit2-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+orbit2-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+orbit2-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+orbit2-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+orbit2-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+orbit2-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+p11-kit-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+p11-kit-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+p11-kit-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+p11-kit-trust-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+p11-kit-trust-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+p11-kit-trust-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+pam-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+pam-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+pam-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+pam-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+pam-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+pam-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+pandera-modin-ray : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+pango-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+pango-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+pango-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+pango-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+pango-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+pango-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+pciutils-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+pciutils-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+pciutils-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+pciutils-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+pciutils-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+pciutils-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+pciutils-libs-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+pciutils-libs-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+pciutils-libs-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+pcre-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+pcre-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+pcre-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+pip2conda : noarch package with potential platform-specific post-link or packaging code.
+pixi-to-conda-lock : noarch package with potential platform-specific post-link or packaging code.
+pixman-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+pixman-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+pixman-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+pixman-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+pixman-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+pixman-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+pkgconfig-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+pkgconfig-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+pkgconfig-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+poetry-conda : noarch package with potential platform-specific post-link or packaging code.
+pyarrow : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bpyarrow\b'.
+pyarrow-all : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bpyarrow\b'.
+pyarrow-core : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bpyarrow\b'.
+pyarrow-tests : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bpyarrow\b'.
+pyproject2conda : noarch package with potential platform-specific post-link or packaging code.
+python-javapackages-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+python-javapackages-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+python-javapackages-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+python-metatensor-torch : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btorch\b'.
+python-metatomic-torch : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btorch\b'.
+r-tensorflow : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btensorflow\b'.
+r-torch : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btorch\b'.
+rattler-build-conda-compat : noarch package with potential platform-specific post-link or packaging code.
+ray-adag : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-air : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-all : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-autoscaler : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-cgraph : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-client : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-core : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-dashboard : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-data : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-default : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-k8s : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-llm : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-observability : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-rllib : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-serve : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-train : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+ray-tune : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+rdma-core-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+rdma-core-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+rdma-core-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+rdma-core-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+rdma-core-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+rdma-core-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+ros-conda-base : noarch package with potential platform-specific post-link or packaging code.
+ros-conda-mutex : noarch package with potential platform-specific post-link or packaging code.
+sagemaker-tensorflow-serving-container : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btensorflow\b'.
+sbe-java : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bjava\b'.
+scipy : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bscipy\b'.
+scipy-sugar : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bscipy\b'.
+scipy-tests : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bscipy\b'.
+secondarycoolantprops : noarch package with potential platform-specific post-link or packaging code.
+sphericart-torch : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btorch\b'.
+sysroot-conda_2_28-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+sysroot-conda_2_28-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+sysroot-conda_2_28-s390x : noarch package with potential platform-specific post-link or packaging code.
+sysroot-conda_2_28-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+systemd-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+systemd-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+systemd-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+systemd-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+systemd-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+systemd-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+systemd-libs-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+systemd-libs-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+systemd-libs-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+tango-torch : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btorch\b'.
+tensorflow : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btensorflow\b'.
+tensorflow-avx2 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btensorflow\b'.
+tensorflow-base : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btensorflow\b'.
+tensorflow-cpu : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btensorflow\b'.
+tensorflow-estimator : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btensorflow\b'.
+tensorflow-gpu : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btensorflow\b'.
+tensorflow-probability : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btensorflow\b'.
+tensorflow-sse3 : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btensorflow\b'.
+torch-harmonics : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btorch\b'.
+torch-scatter : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btorch\b'.
+tox-conda : noarch package with potential platform-specific post-link or packaging code.
+transformer-engine-torch : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btorch\b'.
+u8darts-torch : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\btorch\b'.
+uda-java : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bjava\b'.
+unidist-ray : High complexity, JIT compilation, or Fortran ABI requirements matching pattern '\bray\b'.
+whl2conda : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-image-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-image-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-image-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-image-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-image-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-image-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-keysyms-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-keysyms-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-keysyms-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-keysyms-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-keysyms-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-keysyms-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-renderutil-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-renderutil-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-renderutil-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-renderutil-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-renderutil-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-renderutil-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-wm-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-wm-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-wm-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-wm-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-wm-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+xcb-util-wm-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+xorg-x11-proto-devel-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+xorg-x11-proto-devel-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+xorg-x11-proto-devel-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+xorg-x11-server-common-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+xorg-x11-server-common-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+xorg-x11-server-common-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+xorg-x11-server-xvfb-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+xorg-x11-server-xvfb-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+xorg-x11-server-xvfb-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
+xorg-x11-util-macros-conda-aarch64 : noarch package with potential platform-specific post-link or packaging code.
+xorg-x11-util-macros-conda-ppc64le : noarch package with potential platform-specific post-link or packaging code.
+xorg-x11-util-macros-conda-x86_64 : noarch package with potential platform-specific post-link or packaging code.
