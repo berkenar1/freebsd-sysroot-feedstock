@@ -16,3 +16,7 @@ __pycache__/
 *.tar
 *.tar.gz
 *.whl
+conda-bld/
+
+# Large repodata cache files
+analysis/cache/
