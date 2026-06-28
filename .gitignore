@@ -1,22 +1,42 @@
-# Conda build artifacts
+# Build artifacts
 conda-bld/
-conda-channel/
 output/
-standalone/
 sysroot/
+
+# Conda channel packages
+conda-channel/
+
+# Analysis cache
+analysis/cache/
+
+# Large binaries and shared libs
+*.so
+*.so.*
+*.conda
+*.tar.bz2
+*.tar.zst
+*.whl
+
+# Logs
+orchestration.log
+*.log
 
 # Python cache
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
-# Logs
-*.log
-*.md
-# Binary packages / tarballs
-*.tar
-*.tar.gz
-*.whl
-conda-bld/
+# Temp files
+*.tmp
+.tmp*
 
-# Large repodata cache files
-analysis/cache/
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
